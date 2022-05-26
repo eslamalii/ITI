@@ -1,0 +1,25 @@
+.menu {
+  position: relative;
+  background-color: green;
+  width: 150px;
+  right: 100px;
+  transition: 0.5s;
+}
+
+.menu:hover {
+  right: 0;
+}
+
+a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.info {
+  background-color: brown;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
