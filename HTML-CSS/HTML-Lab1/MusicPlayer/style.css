@@ -1,0 +1,42 @@
+span:hover {
+  cursor: pointer;
+  background-color: rgb(214, 214, 214);
+  padding: 5px;
+}
+
+p {
+  display: inline-block;
+  padding: 10px;
+}
+button {
+  margin: 5px;
+}
+li {
+  padding: 20px;
+}
+
+a {
+  color: red;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#songs {
+  height: 100px;
+}
+#playlist {
+  display: inline-block;
+  padding: 15px;
+  background-color: rgb(188, 224, 255);
+}
+
+#fileInput {
+  display: none;
+}
+
+.styleList {
+  align-content: center;
+}

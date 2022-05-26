@@ -1,0 +1,68 @@
+button {
+  padding: 10px;
+  position: relative;
+  height: 100vh;
+}
+
+#colors {
+  display: grid;
+  width: 200px;
+  height: 500px;
+  border: 1px solid #000000;
+  margin: 10px;
+}
+
+#tools {
+  position: relative;
+  margin: 10px;
+  width: 500px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #000000;
+}
+.toolsp {
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a {
+  margin: 10px;
+  color: coral;
+}
+
+#board {
+  width: 500px;
+  height: 400px;
+  margin: 10px;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toolsBoard {
+  display: inline-block;
+}
+
+#colors > div {
+  padding: 10px;
+}
+
+#fillColorr,
+#strokeColorr {
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+}

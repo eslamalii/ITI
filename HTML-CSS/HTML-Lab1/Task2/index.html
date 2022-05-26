@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form action="#">
+        <div>
+          <label for="fname">Name</label>
+          <input required id="fname" type="text" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input
+            required
+            id="email"
+            type="email"
+            pattern="[a-zA-Z0-9._%+-]+@[A-Za-z]+.com"
+          />
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input
+            required
+            id="password"
+            type="password"
+            pattern=".{8,}"
+            title="Password must be 8 chars at least"
+          />
+        </div>
+
+        <div>
+          <label for="range">Salary</label>
+          <input
+            required
+            oninput="rangeValue(this.value)"
+            type="range"
+            min="1"
+            max="200"
+            value="1"
+            id="range"
+          />
+          <span id="salary">200$</span>
+        </div>
+
+        <div>
+          <label for="age">Age</label>
+          <input required type="number" min="21" name="age" id="age" />
+        </div>
+
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="./validate.js"></script>
+  </body>
+</html>
