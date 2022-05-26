@@ -1,0 +1,10 @@
+.flex-container {
+  flex-wrap: wrap;
+}
+
+#left,
+#profile,
+#right {
+  width: 100%;
+  flex: 1;
+}

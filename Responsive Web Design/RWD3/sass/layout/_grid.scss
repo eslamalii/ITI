@@ -1,0 +1,29 @@
+// $breakpoints: (
+//   xs: 480px,
+//   sm: 768px,
+//   md: 960px,
+//   lg: 1170px,
+//   xl: 1280px,
+// );
+
+// @mixin create-selectors($breakpoint: null) {
+//   @for $i from 1 through $columns {
+//     .col-#{$breakpoint}-#{$i} {
+//       width: percentage($i / $columns);
+//     }
+//   }
+// }
+
+// @each $breakpoint, $width in $breakpoints {
+//   @media (min-width: $width) {
+//     @include create-selectors($breakpoint);
+//   }
+// }
+
+$columns: 12;
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: percentage($i / $columns);
+  }
+}

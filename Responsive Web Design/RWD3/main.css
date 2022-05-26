@@ -1,0 +1,141 @@
+@use "./sass/layout/grid" as i;
+@media screen and (max-width: 768px) {
+  #btn1 {
+    background-color: cadetblue;
+  }
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 10px 0;
+  line-height: 2.5rem;
+}
+
+.font-style-p {
+  font-size: 12px;
+}
+
+.padding-zero {
+  padding: 0;
+}
+
+#header {
+  height: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.font-34 {
+  font-size: 34px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.btn-style {
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: auto;
+  padding: 5%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.margin-10 {
+  margin: 10px;
+  max-width: 300px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.bg-gray {
+  background-color: lightgray;
+}
+
+.header-style {
+  padding: 15px;
+  background-color: #95ccce;
+  margin: 30px 0;
+}
+
+.card-BEM {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  margin: 0 auto 3rem;
+}
+
+.card {
+  padding: 5px;
+  border-radius: 6px;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 4px 30px #aeacac;
+  box-shadow: 2px 4px 30px #aeacac;
+  width: 400px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.card-light {
+  background-color: #2d2d6b;
+  color: white;
+  padding: 7px;
+}
+
+.card-dark {
+  background-color: black;
+  color: white;
+  padding: 7px;
+}
+
+.text-light {
+  color: #2d2d6b;
+}
+
+.text-dark {
+  color: black;
+}
+
+hr {
+  border-top: 1px solid gray;
+}
+/*# sourceMappingURL=main.css.map */
