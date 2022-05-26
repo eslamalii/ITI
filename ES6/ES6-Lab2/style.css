@@ -1,0 +1,25 @@
+div {
+}
+
+#tabs {
+}
+
+#info {
+}
+
+button {
+  padding: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: gray;
+}
+
+li {
+  font-weight: bold;
+}
