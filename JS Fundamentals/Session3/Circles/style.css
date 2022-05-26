@@ -1,0 +1,9 @@
+.content {
+  justify-content: center;
+  display: flex;
+  margin: 20px;
+}
+
+.img {
+  padding: 20px;
+}
