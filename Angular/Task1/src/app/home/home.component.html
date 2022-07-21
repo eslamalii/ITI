@@ -1,0 +1,19 @@
+<p class="badge bg-primary text-wrap text-uppercase fs-4 fw-bold">Home</p>
+
+<ul *ngFor="let obj of peopleByCountry" [ngSwitch]="obj.country">
+  <li *ngSwitchCase="'UK'" style="color: red">
+    {{ obj.country }}
+  </li>
+
+  <li *ngSwitchCase="'US'" style="color: blue">
+    {{ obj.country }}
+  </li>
+
+  <li *ngSwitchCase="'MARS'" style="color: coral">
+    {{ obj.country }}
+  </li>
+
+  <ul *ngFor="let name of obj.people">
+    <li style="color: initial">{{ name.name }}</li>
+  </ul>
+</ul>
