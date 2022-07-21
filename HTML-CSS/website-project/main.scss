@@ -1,0 +1,181 @@
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-family: "Work Sans", sans-serif;
+  color: #18181d;
+}
+.title {
+  display: flex;
+  min-height: 640px;
+  padding: 0, 36px;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      180deg,
+      rgba(24, 24, 29, 0.45),
+      rgba(24, 24, 29, 0.45)
+    ),
+    url("./imgs/5d9c8fcaca1c6c58e3521d0f_contourenviro1_300_download.jpeg");
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+.section {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.padding24 {
+  padding: 24px 0;
+}
+
+a {
+  color: #18181d;
+  line-height: 26px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo {
+  display: block;
+  max-height: 103px;
+  max-width: 103px;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0.3;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+.btn-transform {
+  justify-content: center;
+  border-radius: 0px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  flex: 0 0 auto;
+  padding: 18px 30px;
+}
+
+.item-view {
+  opacity: 0;
+  position: absolute;
+  z-index: 30;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-direction: column;
+  padding-bottom: 20px;
+  justify-content: flex-end;
+  align-items: stretch;
+  background-image: linear-gradient(
+    180deg,
+    rgba(24, 24, 29, 0.1),
+    rgba(24, 24, 29, 0.1)
+  );
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 8px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
+}
+
+.item-img1 {
+  background-image: url("https://assets.website-files.com/5d9c8fcaca1c6c684c521b94/5d9c8fcaca1c6ca116521dc7_bola-disc-flush-2-rose-gold-in-room-high_download.jpg");
+  height: 700px;
+  background-position: 50% 0%;
+  background-size: cover;
+}
+
+.item-img2 {
+  height: 520px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url("./imgs/item-img2.jpeg");
+}
+
+.title-text {
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.title-size2 {
+  margin-bottom: 25px;
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 300;
+  white-space: normal;
+}
+
+// .info-text {
+//   position: relative;
+//   width: 100%;
+// }
+.btn-title {
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  max-width: 70%;
+  text-align: center;
+  padding: 18px 30px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button-arrow {
+  margin-left: 20px;
+}
+
+.wrapper.m50-100 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.z {
+  z-index: 100;
+}
+
+.image-wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.imgh {
+  display: flex;
+  height: 360px;
+  background-position: 50% 50%;
+  background-size: cover;
+  justify-content: space-between;
+  align-items: flex-start;
+}
