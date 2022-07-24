@@ -1,0 +1,42 @@
+<div class="d-flex flex-column container justify-content-center">
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter New Todo"
+      #todo
+    />
+    <button
+      class="btn btn-outline-primary"
+      (click)="addTodo(todo.value)"
+      type="button"
+    >
+      Add
+    </button>
+  </div>
+
+  <div class="flex-row d-flex">
+    <span class="w-25 my-auto">Todo List</span>
+    <input
+      type="text"
+      (keyup)="filter()"
+      [(ngModel)]="tododata"
+      class="form-control"
+      placeholder="Filter"
+    />
+  </div>
+
+  <div class="container mt-3">
+    <ul class="list-group">
+      <li
+        *ngFor="let todo of todolist"
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <span class="my-auto">{{ todo }}</span>
+        <button class="btn btn-danger" (click)="deleteTodo(todo)">
+          Complate
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
