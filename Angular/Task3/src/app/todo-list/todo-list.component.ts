@@ -15,10 +15,14 @@ export class TodoListComponent implements OnInit {
   @ViewChild('todo') todoElement!: ElementRef;
   todolist: string[] = [];
   tododata: string = '';
+  todolistCopy: string[] = [];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.todolistCopy = this.todolist;
+    console.log(this.todolistCopy);
+  }
 
   addTodo(todo: string) {
     this.todolist.push(todo);
@@ -33,12 +37,13 @@ export class TodoListComponent implements OnInit {
     }
   }
 
-  filter() {
+  filter(): void {
     if (this.tododata.length !== 0) {
-      const todo = this.todolist.filter((val) => {
+      this.todolist = this.todolistCopy.filter((val) => {
         return val.includes(this.tododata);
       });
-      this.todolist = [...todo];
+    } else {
+      this.todolist = this.todolistCopy;
     }
   }
 }
