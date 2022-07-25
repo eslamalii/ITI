@@ -1,19 +1,26 @@
 <div class="d-flex flex-column container justify-content-center">
-  <div class="input-group mb-3">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Enter New Todo"
-      #todo
-    />
-    <button
-      class="btn btn-outline-primary"
-      (click)="addTodo(todo.value)"
-      type="button"
-    >
-      Add
-    </button>
-  </div>
+  <form [formGroup]="todoText" (ngSubmit)="addTodo(todoText)">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        name="todo"
+        class="form-control"
+        [ngClass]="{
+          'border-danger ':
+            todoText.get('todoInput')?.errors != null &&
+            todoText.get('todoInput')?.touched
+        }"
+        placeholder="Enter New Todo"
+        formControlName="todoInput"
+      />
+      <button
+        class="btn btn-outline-primary px-5"
+        [disabled]="todoText.invalid"
+      >
+        Add
+      </button>
+    </div>
+  </form>
 
   <div class="flex-row d-flex">
     <span class="w-25 my-auto">Todo List</span>
@@ -25,6 +32,7 @@
       placeholder="Filter"
     />
   </div>
+  <p class="text-end">There are {{ todolist.length }} todos</p>
 
   <div class="container mt-3">
     <ul class="list-group">

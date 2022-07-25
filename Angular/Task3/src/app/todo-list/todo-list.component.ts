@@ -1,10 +1,5 @@
-import {
-  Component,
-  ContentChild,
-  ElementRef,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-list',
@@ -12,21 +7,23 @@ import {
   styleUrls: ['./todo-list.component.css'],
 })
 export class TodoListComponent implements OnInit {
-  @ViewChild('todo') todoElement!: ElementRef;
   todolist: string[] = [];
   tododata: string = '';
   todolistCopy: string[] = [];
+
+  todoText: FormGroup = new FormGroup({
+    todoInput: new FormControl(null, [Validators.required]),
+  });
 
   constructor() {}
 
   ngOnInit(): void {
     this.todolistCopy = this.todolist;
-    console.log(this.todolistCopy);
   }
 
-  addTodo(todo: string) {
-    this.todolist.push(todo);
-    (this.todoElement.nativeElement as HTMLInputElement).value = '';
+  addTodo(todo: FormGroup) {
+    this.todolist.push(todo.value.todoInput);
+    this.todoText.reset();
   }
 
   deleteTodo(todo: string) {

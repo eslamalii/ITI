@@ -1,0 +1,16 @@
+<div class="row text-center justify-content-center text-center my-4">
+  <div class="col-12">
+    <ul>
+      <li
+        class="d-inline m-3"
+        *ngFor="let star of stars"
+        (click)="setSelectedStar(star)"
+        [ngClass]="star <= selectedStar ? 'selected' : ''"
+        #starelem
+        (mouseenter)="addStar(star)"
+      >
+        <i class="fa fa-star"></i>
+      </li>
+    </ul>
+  </div>
+</div>

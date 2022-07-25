@@ -1,0 +1,6 @@
+li.selected {
+  color: gold;
+}
+li:hover {
+  color: gold;
+}
