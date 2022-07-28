@@ -1,0 +1,49 @@
+<div class="container d-flex flex-column">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center p-4">
+      <li class="page-item {{ currentPage === 1 ? 'disabled' : '' }}">
+        <a class="page-link" (click)="getAllUsers(currentPage - 1)">Previous</a>
+      </li>
+      <li
+        class="page-item cursor-pointer"
+        *appFor="usersFromApi.total_pages; let i = index"
+      >
+        <a
+          class="page-link cursor-pointer"
+          [ngClass]="{ active: currentPage == i + 1 }"
+          (click)="getAllUsers(i + 1)"
+          >{{ i + 1 }}</a
+        >
+      </li>
+      <li
+        class="page-item {{
+          currentPage === usersFromApi.total_pages ? 'disabled' : ''
+        }}"
+      >
+        <a class="page-link" (click)="getAllUsers(currentPage + 1)">Next</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">username</th>
+          <th scope="col">avatar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of usersFromApi.data">
+          <td>{{ user.id }}</td>
+          <td>{{ user.fname }}</td>
+          <td>{{ user.lname }}</td>
+          <td>{{ user.username }}</td>
+          <td><img [src]="user.avatar" style="height: 100px" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

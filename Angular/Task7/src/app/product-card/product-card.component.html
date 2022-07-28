@@ -1,0 +1,26 @@
+<div class="col m-3">
+  <div class="card" style="width: 18rem">
+    <div class="bg-image hover-details position-relative">
+      <img [src]="product?.image" class="w-100 image" alt="..." />
+      <div class="details">
+        <h4>Rate: {{ product?.rating?.rate }}</h4>
+        <h4>Count: {{ product?.rating?.count }}</h4>
+      </div>
+    </div>
+    <div class="card-body">
+      <a [routerLink]="['/productditl', product!.id]">
+        <h5 class="card-title">{{ product?.title }}</h5>
+      </a>
+      <p class="card-text">{{ product!.description | stringSlice: 30 }}....</p>
+      <p class="card-text fw-bold">{{ product?.price | currency: "USD" }}</p>
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-primary" (click)="setProductToCart(product!)">
+          Add to cart
+        </button>
+        <button class="btn btn-warning" (click)="addFavItem(product!)">
+          <i class="fa-solid fa-star"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<form [formGroup]="form">
+  <div>
+    <label for="">Title</label>
+    <input type="text" formControlName="title" />
+    <p *ngIf="title.errors?.['minlength']" style="color: red">
+      length is less than {{title.errors?.['minlength']['requiredLength']}}
+    </p>
+  </div>
+  <div>
+    <label for="">Description</label>
+    <input type="text" formControlName="description" />
+  </div>
+  <div>
+    <label for="">Price</label>
+    <input type="text" formControlName="price" />
+  </div>
+
+  <input
+    type="submit"
+    value="Add User"
+    (click)="addUser(form.value)"
+    [routerLink]="['/products']"
+  />
+</form>
